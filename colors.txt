@@ -1,0 +1,16 @@
+dark:#282828
+medium-dark:#928374
+medium-light:#A89984
+light:#EBDBB2
+dark-red:#CC241D
+red:#FB4934
+dark-green:#98971A
+green:#B8BB26
+dark-yellow:#D79921
+yellow:#FABD2F
+dark-blue:#458588
+blue:#83A598
+dark-purple:#B16286
+purple:#D3869B
+dark-sea:#689D6A
+sea:#8EC07C

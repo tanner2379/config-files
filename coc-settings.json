@@ -1,0 +1,28 @@
+{
+  "tslint.autoFixOnSave": true,
+  "prettier.disableSuccessMessage": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "ruby"
+  ],
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+  "explorer.openAction.strategy": "previousBuffer",
+  "explorer.quitOnOpen": true,
+  "explorer.width": 30,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.git.enable": true,
+  "explorer.keyMappings.global": {
+    "s": "open:vsplit",
+    "mm": "rename",
+    "mc": "copyFile",
+    "C": "copyFile",
+    "md": "delete",
+    "D": "delete",
+    "ma": "addFile",
+    "mA": "addDirectory"
+}
+}

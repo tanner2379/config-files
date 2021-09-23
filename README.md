@@ -5,4 +5,4 @@ I work full time using the init.vim, tmux.conf, gitmux.conf, and coc-settings.nv
 
 te is a bash script that launches tmux into a vs-code-like state, with an nvim editor on top and a terminal on the bottom.
 
-### All other files in this repository are subject to heavy change as I am currently configuring them myself and have not been living in them for very long. As mentioned, this repository is meant for my sole benefit so I don't have to send myself config files via email. If there is significant, non-trivial overlap with one of YOUR configs and you wish me to take that file down/make it private, I will.
+<strong>All other files in this repository are subject to heavy change as I am currently configuring them myself and have not been living in them for very long. As mentioned, this repository is meant for my sole benefit so I don't have to send myself config files via email. If there is significant, non-trivial overlap with one of YOUR configs and you wish me to take that file down/make it private, I will.</strong>

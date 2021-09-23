@@ -1,3 +1,11 @@
+############################
+GRUVBOX THEME COLORS
+############################
+None of this is my work. This file exists purely for my convenience.
+
+
+###### Gogh terminal theme colors #########
+
 dark:#282828
 medium-dark:#928374
 medium-light:#A89984
@@ -15,7 +23,7 @@ purple:#D3869B
 dark-sea:#689D6A
 sea:#8EC07C
 
-######### Official Morhetz Colors copy pasted from his repo, (the ones above are from gogh themes) ##############
+######### Official Morhetz Colors from his repo ##############
  GRUVCOLR         HEX       RELATV ALIAS   TERMCOLOR      RGB           ITERM RGB     OSX HEX
  --------------   -------   ------------   ------------   -----------   -----------   -------
  dark0_hard       #1d2021   [   ]  [   ]   234 [h0][  ]    29- 32- 33    22- 24- 25   #161819

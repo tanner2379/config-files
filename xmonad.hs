@@ -1,23 +1,19 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.Ungrab
 import System.IO
 
 main = do
-  xmproc <- spawnPipe "xmobar"
-
   xmonad $ defaultConfig
-    { manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts $ layoutHook defaultConfig
-    , logHook = dynamicLogWithPP xmobarPP
-    	{ ppOutput = hPutStrLn xmproc
-	, ppTitle = xmobarColor "green" "" . shorten 50
-	}
-    , terminal = "alacritty"
-    , modMask = mod4Mask --rebind modmask to windows key
+    { terminal = "alacritty"
     } `additionalKeys`
-    [ ((controlMask, xK_Print), spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/'")
+    [ ((shiftMask, xK_Print), ungrab *> spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/'")
     , ((0, xK_Print), spawn "scrot -e 'mv $f ~/Pictures/Screenshots/'")
+    , ("M-f", spawn "firefox")
+    , ("M-t", spawn terminal)
+    , ("M-g", spawn "gmrun")
+    , ((mod4Mask, xK_Left), spawn "amixer set Master 5%-")
+    , ((mod4Mask, xK_Right), spawn "amixer set Master 5%+")
+
     ]

@@ -15,7 +15,7 @@ vicmd_symbol = ""
 #disabled = true
 style = "fg:#B8BB26"
 format = "[$read_only ]($style)[$path ]($style)(fg:#504945)"
-read_only=" "
+read_only="🔒"
 truncate_to_repo = false
 fish_style_pwd_dir_length = 1
 
@@ -98,7 +98,7 @@ style = "fg:#B16286"
 format = "($conflicted$staged$modified$renamed$deleted$untracked$stashed$ahead_behind)"
 conflicted = "(fg:#504945)[Conflicted:${count}](fg:#FB4934)"
 staged = "(fg:#504945)[Staged:${count} ](fg:#D3869B)"
-modified = "(fg:#504945)[Modified:${count} ](fg:#D3869B)"
+modified = "(fg:#504945)[Modified:${count} ](fg:#d65d0e)"
 renamed = "(fg:#504945)[Renamed:${count} ](fg:#8EC07C)"
 deleted = "(fg:#504945)[Deleted:${count} ](fg:#FB4934)"
 untracked = "(fg:#504945)[Untracked:${count} ](fg:#83A598)"

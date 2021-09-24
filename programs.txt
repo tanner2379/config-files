@@ -9,3 +9,4 @@ alacritty
 gmrun
 firefox
 scrot
+btrfs

@@ -28,4 +28,5 @@ main = do
     [ ("M-f", spawn "firefox")
     , ("M-a", spawn "alacritty")
     , ("M-g", spawn "gmrun")
+    , ("M-x", spawn "builtin exit")
     ]

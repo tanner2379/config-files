@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/tanner/Pictures/backgrounds/pexels-stefan-stefancik-919606.jpg' 

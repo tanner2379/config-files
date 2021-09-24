@@ -1,0 +1,11 @@
+nvim
+xmonad
+xmonad-config
+tmux
+feh
+trash
+lux
+alacritty
+gmrun
+firefox
+scrot

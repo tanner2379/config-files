@@ -3,7 +3,7 @@ xmonad
 xmonad-config
 tmux
 feh
-trash
+trash-cli
 lux
 alacritty
 gmrun

@@ -23,6 +23,6 @@ main = do
     , ((mod4Mask, xK_Right), spawn "amixer set Master 5%+")
     ] `additionalKeysP`
     [ ("M-f", spawn "firefox")
-    , ("M-<Return>", spawn "alacritty")
+    , ("M-a", spawn "alacritty")
     , ("M-g", spawn "gmrun")
     ]

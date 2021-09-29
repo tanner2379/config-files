@@ -102,10 +102,10 @@ modified = "(fg:#504945)[Modified:${count} ](fg:#d65d0e)"
 renamed = "(fg:#504945)[Renamed:${count} ](fg:#8EC07C)"
 deleted = "(fg:#504945)[Deleted:${count} ](fg:#FB4934)"
 untracked = "(fg:#504945)[Untracked:${count} ](fg:#83A598)"
-stashed = "(fg:#504945)[Stashed:${count}S(fg:#504945)"
-ahead = "(fg:#504945)[Ahead:${count}↑(fg:#504945)"
-behind = "(fg:#504945)[Behind:${count}↓)(fg:#504945)"
-diverged = "(fg:#504945)[Diverged:${count}נּ][ Ahead:${ahead_count}↑[ Behind:${behind_count}↓(fg:#504945)"
+stashed = "(fg:#504945)[Stashed:${count} ](fg:#83A598)"
+ahead = "(fg:#504945)[Ahead:${count}↑ ](fg:#504945)"
+behind = "(fg:#504945)[Behind:${count}↓ ](fg:#504945)"
+diverged = "(fg:#504945)[Diverged:${count}נּ][ Ahead:${ahead_count}↑[ Behind:${behind_count}↓](fg:#504945)"
 
 [shlvl]
 disabled = false

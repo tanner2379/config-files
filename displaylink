@@ -1,0 +1,7 @@
+#!/sbin/openrc-run
+
+start(){
+	sudo modprobe evdi
+	sudo modprobe udl
+       sudo start-stop-daemon --start --background --chdir /usr/lib/displaylink --make-pidfile --pidfile /run/displaylink.pid --exec /usr/lib/displaylink/DisplayLinkManager
+}

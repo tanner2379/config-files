@@ -162,6 +162,7 @@ nnoremap bo :%bd\|e#<CR>
 
 " easier end of line
 nmap 9 $
+vmap 9 $
 " save with CTRL+S
 inoremap <C-s> <ESC>:w<CR>
 nnoremap <C-s> :w<CR>

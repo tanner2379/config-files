@@ -9,7 +9,7 @@ All of this is Gruvbox color schemed
 
 
 ## Note to self
-Replace init.vim and coc.json and do the following
+Replace init.vim and coc-settings.json and do the following
 
 Install rust analyzer:
 ```bash

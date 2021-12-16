@@ -6,3 +6,18 @@ I work full time using the init.vim, tmux.conf, and coc-settings.nvim files. If 
 te is a bash script that launches tmux into a vs-code-like state, with an nvim editor on top and a terminal on the bottom.
 
 All of this is Gruvbox color schemed
+
+
+## Note to self
+Replace init.vim and coc.json and do the following
+
+Install rust analyzer:
+```bash
+  curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+  chmod +x ~/.local/bin/rust-analyzer
+```
+In init.vim :CocInstall coc-rust-analyzer
+
+
+Install coc-pyright
+In init.vim :CocInstall coc-pyright

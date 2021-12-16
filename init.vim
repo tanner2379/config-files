@@ -20,6 +20,7 @@ call plug#begin()
   Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'pangloss/vim-javascript'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'rust-lang/rust.vim'
   Plug 'tpope/vim-commentary'
 call plug#end()
 " Plugins END
@@ -147,8 +148,6 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <C-e> :Ag<Cr>
 nmap <Leader>bl :Buffers<CR>
 nmap <Leader>g :GFiles<CR>
-nmap <Leader>e :Ag<CR>
-nmap <Leader>p :Files<CR>
 nmap <Leader>g? :GFiles?<CR>
 nmap <Leader>H :History<CR>
 

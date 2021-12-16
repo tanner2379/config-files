@@ -24,5 +24,6 @@
     "D": "delete",
     "ma": "addFile",
     "mA": "addDirectory"
-}
+  },
+  "rust-analyzer.server.path": "/home/tanner/.local/bin/rust-analyzer"
 }

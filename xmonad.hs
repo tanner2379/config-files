@@ -13,15 +13,17 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.Grid
 import XMonad.Layout.Column
 
+import XMonad.Actions.CycleWS
+
 myManageHook::ManageHook
 myManageHook = composeAll
-  [ className =? "Gimp" --> doFullFloat
+  [ className =? "Gimp" --> doCenterFloat
   , className =? "gmrun" --> doCenterFloat
+  , className =? "jetbrains-studio" --> doCenterFloat
   , isDialog --> doFloat
   ]
 
 myLayout = ResizableTall 1 (3/100) (1/2) [] ||| Grid ||| Column 1.8
-  
 
 myStartupHook :: X ()
 myStartupHook = do
@@ -38,11 +40,11 @@ main = do
   xmonad $ defaultConfig
     { terminal = myTerminal
     , manageHook = myManageHook
-    , layoutHook = myLayout
+    , layoutHook =  myLayout
     , startupHook = myStartupHook
     } `additionalKeys`
-    [ ((shiftMask, xK_Print), unGrab *> spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/'")
-    , ((0, xK_Print), spawn "scrot -e 'mv $f ~/Pictures/Screenshots/'")
+    [ ((shiftMask, xK_Print), unGrab *> spawn "scrot -s -e 'mv $f ~/Pictures/screenshots/'")
+    , ((0, xK_Print), spawn "scrot -e 'mv $f ~/Pictures/screenshots/'")
     , ((mod4Mask, xK_Left), spawn "amixer set Master 5%-")
     , ((mod4Mask, xK_Right), spawn "amixer set Master 5%+")
     , ((mod4Mask, xK_Up), spawn "lux -a 10%")
@@ -52,4 +54,6 @@ main = do
     , ((mod1Mask, xK_f), spawn "firefox")
     , ((mod1Mask, xK_a), spawn myTerminal)
     , ((mod1Mask, xK_g), spawn "gmrun")
+    , ((mod1Mask, xK_Tab), moveTo Next NonEmptyWS)
+    , ((mod1Mask .|. shiftMask, xK_Tab), shiftTo Next EmptyWS)
     ]

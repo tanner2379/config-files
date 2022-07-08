@@ -12,18 +12,33 @@ import XMonad.Hooks.ManageHelpers (isDialog, doFullFloat, doCenterFloat)
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Grid
 import XMonad.Layout.Column
+import XMonad.Layout.NoBorders
+import qualified XMonad.StackSet as W
 
 import XMonad.Actions.CycleWS
+import XMonad.Actions.WorkspaceNames
+
+
+-- visibleWorkspaces :: X [WorkspaceId]
+-- visibleWorkspaces = do
+--   ws <- gets windowset
+--   return $ map (W.tag . W.workspace) $ W.current ws : W.visible ws
+
+-- joinToString :: [String] -> String
+-- joinToString workspaceIds = foldl (++) "" workspaceIds
+
+-- screenString = joinToString $ map (W.tag . W.workspace) $ visibleScreens $ W.windowSet
+-- screenString = map getWorkspaceName visibleWorkspaces
 
 myManageHook::ManageHook
 myManageHook = composeAll
   [ className =? "Gimp" --> doCenterFloat
   , className =? "gmrun" --> doCenterFloat
-  , className =? "jetbrains-studio" --> doCenterFloat
+  , className =? "Widentify" --> doFloat
   , isDialog --> doFloat
   ]
 
-myLayout = ResizableTall 1 (3/100) (1/2) [] ||| Grid ||| Column 1.8
+myLayout = smartBorders (ResizableTall 1 (3/100) (1/2) [] ||| Grid ||| Column 1.8)
 
 myStartupHook :: X ()
 myStartupHook = do
@@ -40,7 +55,7 @@ main = do
   xmonad $ defaultConfig
     { terminal = myTerminal
     , manageHook = myManageHook
-    , layoutHook =  myLayout
+    , layoutHook = myLayout
     , startupHook = myStartupHook
     } `additionalKeys`
     [ ((shiftMask, xK_Print), unGrab *> spawn "scrot -s -e 'mv $f ~/Pictures/screenshots/'")
@@ -56,4 +71,7 @@ main = do
     , ((mod1Mask, xK_g), spawn "gmrun")
     , ((mod1Mask, xK_Tab), moveTo Next NonEmptyWS)
     , ((mod1Mask .|. shiftMask, xK_Tab), shiftTo Next EmptyWS)
+    , ((mod4Mask, xK_l), spawn "env XSECURELOCK_LIST_VIDEOS_COMMAND='find ~/Screensavers -type f' XSECURELOCK_SAVER=saver_mpv XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 XSECURELOCK_IMAGE_DURATION_SECONDS=300 XSECURELOCK_PASSWORD_PROMPT=time xsecurelock")
+    -- , ((mod4Mask, xK_v), spawn $ "widentify " ++ screenString)
+
     ]

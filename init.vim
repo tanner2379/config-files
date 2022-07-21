@@ -6,6 +6,7 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'cespare/vim-toml'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'dart-lang/dart-vim-plugin'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'itchyny/lightline.vim'
   Plug 'jparise/vim-graphql'
@@ -16,6 +17,8 @@ call plug#begin()
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'mengelbrecht/lightline-bufferline'
+  Plug 'natebosch/vim-lsc'
+  Plug 'natebosch/vim-lsc-dart'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
   Plug 'pangloss/vim-javascript'
@@ -284,7 +287,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
-  " Setup formatexpr specified filetype(s).
+  " Setup formatexpr specified filetypes).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
@@ -332,4 +335,11 @@ nmap [h :GitGutterPrevHunk<CR>
 " ---------------------------------------------------------
 "  CoCExplorer
 " ---------------------------------------------------------
-nmap <Leader>n :CocCommand explorer<CR>
+nmap <Leader>n :CocCommand explorer<CR>(
+
+" ---------------------------------------------------------
+"  Dart
+"  --------------------------------------------------------
+let g:dart_format_on_save = 1
+let g:dart_style_guide = 2
+let dart_html_in_string = v:true

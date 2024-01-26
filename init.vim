@@ -185,6 +185,8 @@ nnoremap S O<ESC>
 "make < > shifts keep selection
 vnoremap < <gv
 vnoremap > >gv
+" quotes around selected word
+nnoremap " bi"<ESC>ea"<ESC>
 
 " snippets
 inoremap rhn  <ESC>:execute "r /home/tanner/.config/nvim/snippets/rhn.tsx"<CR>kdd
